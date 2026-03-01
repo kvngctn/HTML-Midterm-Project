@@ -244,12 +244,16 @@ section p {
 
 /* ============ MEMBER CARD ============ */
 .member-card {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
     background-color: #FFFFFF;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    padding: 20px;
 }
 
 .member-card:hover {
@@ -258,14 +262,20 @@ section p {
 }
 
 .member-image {
-    width: 100%;
-    height: 250px;
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
     object-fit: cover;
     background: linear-gradient(135deg, #0052CC 0%, #003d99 100%);
+    border-radius: 8px;
 }
 
 .member-info {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    flex: 1;
+    text-align: left;
 }
 
 .member-name {
