@@ -183,9 +183,12 @@ section h3 {
 }
 
 section p {
-    color: #ffffff;
     margin-bottom: 15px;
     line-height: 1.8;
+}
+
+body {
+    color: #333
 }
 
 /* ============ GRID LAYOUTS ============ */
@@ -194,8 +197,8 @@ section p {
     gap: 30px;
 }
 
-.grid-2 {
-    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+.grid-2 { 
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); 
 }
 
 .grid-3 {
@@ -204,6 +207,10 @@ section p {
 
 .grid-4 {
     grid-template-columns: repeat(auto-fit, minmax(22%, 1fr));
+}
+
+.grid-about {
+    align-items: start;
 }
 
 .card {
@@ -630,4 +637,161 @@ footer {
         padding: 10px 20px;
         font-size: 14px;
     }
+}
+
+/* ===== OFFICERS ===== */
+.officers-section,
+.committee-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.officers-section h2,
+.committee-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #05122B;
+}
+
+/* Officer Rows */
+.officer-row {
+    display: grid;
+    gap: 25px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.officer-row.one {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto 30px;
+}
+
+.officer-row.three {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.officer-row.four {
+    grid-template-columns: repeat(4, 250px);
+    max-width: 1100px;
+    margin: 0 auto 30px;
+}
+
+.officer-row.four-four {
+    grid-template-columns: repeat(4, 270px);
+    max-width: 1100px;
+    margin: 0 auto 30px;
+}
+
+/* Officer Card */
+.officer-card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 22px 15px;
+    font-weight: 600;
+    color: #0A1F44;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.officer-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ===== COMMITTEES ===== */
+.committee-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* change from center to left */
+    gap: 20px;
+}
+
+.committee-card {
+    flex: 1 1 180px; /* responsive width */
+    max-width: 220px;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Committee & Officer Photos - unified size */
+.committee-card img,
+.officer-photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px; /* optional spacing below image */
+}
+
+/* If using .officer-photo wrapper */
+.officer-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    background: #D9E6FF;
+}
+
+.officer-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    display: block;
+}
+
+/* Officer Text */
+.officer-position {
+    font-size: 16px;
+    font-weight: 700;
+    color: #05122B;
+    margin-bottom: 6px;
+}
+
+.officer-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0A1F44;
+    margin-bottom: 4px;
+}
+
+.officer-info {
+    font-size: 13px;
+    color: #4A5D73;
+}
+
+/* FORCE VISIBILITY INSIDE OFFICER CARDS */
+.officer-card {
+    background: #FFFFFF;
+    color: #0A1F44; /* dark navy */
+    font-family: 'Georgia', serif;
+    text-align: center;
+}
+
+/* Position title */
+.officer-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #05122B;
+    margin-bottom: 6px;
+}
+
+/* Officer name */
+.officer-card .name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0A1F44;
+    margin-bottom: 4px;
+}
+
+/* Course + year */
+.officer-card .info {
+    font-size: 13px;
+    color: #4A5D73;
 }
