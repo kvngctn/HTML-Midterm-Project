@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Of Information Technology</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes flashFade {
+            0% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .animate-pop {
+            animation: popIn 1.5s ease-out forwards;
+        }
+
+        .flash-overlay {
+            position: fixed;
+            inset: 0;
+            background: white;
+            animation: flashFade 1s ease-out forwards;
+            z-index: 50;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-700 via-blue-500 to-white flex items-center justify-center px-6">    
+    <div class="flash-overlay"></div>
+    <div class="animate-pop bg-white/90 backdrop-blur-lg shadow-2xl rounded-2xl p-10 max-w-5xl w-full grid md:grid-cols-2 gap-10 items-center">        
+        <div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-800 leading-tight">
+                League Of Information Technology
+            </h1>
+            <p class="mt-4 text-gray-600 text-lg">
+                Empowering future innovators through technology, collaboration, and excellence.
+            </p>
+
+            <div class="mt-6 flex gap-4">
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-2xl shadow-lg transition duration-300 hover:scale-105">
+                    Join Us
+                </button>
+                <button class="border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white px-6 py-3 rounded-2xl transition duration-300 hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </div>        
+        <div class="flex justify-center">
+            <div class="bg-blue-700 text-white rounded-2xl p-8 shadow-xl w-full max-w-sm">
+                <h2 class="text-2xl font-bold mb-4 text-orange-400">
+                    Our Mission
+                </h2>
+                <p class="text-sm leading-relaxed">
+                    Kahit ano nalang lahat nyo dito Karl
+                </p>
+
+                <div class="mt-6 border-t border-blue-500 pt-4">
+                    <p class="text-xs text-blue-200">
+                        © 2026 League Of Information Technology. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
