@@ -3,296 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>League of Information Technology Students - Student Organization</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="Images/Icons/Webpage Icon.png" type="image/png">
+    <title>League Of Information Technology Students</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @keyframes popIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes flashFade {
+            0% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .animate-pop {
+            animation: popIn 1.5s ease-out forwards;
+        }
+
+        .flash-overlay {
+            position: fixed;
+            inset: 0;
+            background: white;
+            animation: flashFade 1s ease-out forwards;
+            z-index: 50;
+            pointer-events: none;
+        }
+    </style>
 </head>
-<body>
-    <!-- ============ HEADER ============ -->
-    <header>
-        <div class="header-top">
-            <a href="index.html" class="logo">LI<span>SO</span></a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="main.html">Main</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="what-we-do.html">What We Do</a></li>
-                    <li><a href="activities.html">Activities</a></li>
-                    <li><a href="members.html">Members</a></li>
-                    <li><a href="news-events.html">News & Events</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="developers.html">Developers</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body class="min-h-screen bg-gradient-to-br from-blue-700 via-blue-500 to-white flex items-center justify-center px-6">    
+    <div class="flash-overlay"></div>
+    <div class="animate-pop bg-white/90 backdrop-blur-lg shadow-2xl rounded-2xl p-10 max-w-5xl w-full grid md:grid-cols-2 gap-10 items-center">        
+        <div>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-800 leading-tight">
+                League Of Information Technology Students
+            </h1>
+            <p class="mt-4 text-gray-600 text-lg">
+                Empowering future innovators through technology, collaboration, and excellence.
+            </p>
 
-    <!-- ============ HERO SECTION ============ -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>League of Information Technology Students</h1>
-            <p>Empowering Students Through Technology and Innovation</p>
-            <a href="about.html" class="btn">Explore Our Mission</a>
-            <a href="members.html" class="btn btn-secondary">Meet Our Team</a>
-        </div>
-    </section>
-
-    <!-- ============ MEMBERS SPLASH ============ -->
-    <section class="container">
-        <h2>Our Leadership Team</h2>
-        <div style="margin-bottom: 40px;">
-            <img src="https://via.placeholder.com/1200x300/0052CC/FFFFFF?text=Leadership+Team+Group+Photo" alt="Leadership Team" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        <div class="grid grid-4">
-            <!-- President -->
-            <div class="member-card">
-                <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 250px; display: flex; align-items: center; justify-content: center; color: white; font-size: 60px;">👨‍💼</div>
-                <div class="member-info">
-                    <div class="member-name">John Michael Santos</div>
-                    <div class="member-role">President</div>
-                    <div class="member-bio">Visionary leader driving innovation and organizational growth.</div>
-                </div>
+            <div class="mt-6 flex gap-4">
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-2xl shadow-lg transition duration-300 hover:scale-105"><a href=" https://forms.gle/DUPZqFxmb7EVtkv17">
+                    Join Us
+                </a></button>
+                <button class="border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white px-6 py-3 rounded-2xl transition duration-300 hover:scale-105"><a href="about.html">
+                    Learn More
+                </a></button>
             </div>
+        </div>        
+        <div class="flex justify-center">
+            <div class="bg-blue-700 text-white rounded-2xl p-8 shadow-xl w-full max-w-sm">
+                <h2 class="text-2xl font-bold mb-4 text-orange-400">
+                    Our Mission
+                </h2>
+                <p class="text-sm leading-relaxed">
+                    To represent and empower Information Technology students by promoting academic excellence, leadership, collaboration, and innovation. LITS is committed to creating opportunities that enhance technical competence and student engagement within the university community.
+                </p>
 
-            <!-- Vice President -->
-            <div class="member-card">
-                <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 250px; display: flex; align-items: center; justify-content: center; color: white; font-size: 60px;">👩‍💼</div>
-                <div class="member-info">
-                    <div class="member-name">Maria Christine Garcia</div>
-                    <div class="member-role">Vice President</div>
-                    <div class="member-bio">Strategic coordinator ensuring smooth operations and member engagement.</div>
-                </div>
-            </div>
-
-            <!-- Secretary -->
-            <div class="member-card">
-                <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 250px; display: flex; align-items: center; justify-content: center; color: white; font-size: 60px;">📝</div>
-                <div class="member-info">
-                    <div class="member-name">Robert James Cruz</div>
-                    <div class="member-role">Secretary</div>
-                    <div class="member-bio">Documentation specialist maintaining records and communications.</div>
-                </div>
-            </div>
-
-            <!-- Treasurer -->
-            <div class="member-card">
-                <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 250px; display: flex; align-items: center; justify-content: center; color: white; font-size: 60px;">💰</div>
-                <div class="member-info">
-                    <div class="member-name">Anna Marie Lopez</div>
-                    <div class="member-role">Treasurer</div>
-                    <div class="member-bio">Financial manager handling budgets and resource allocation efficiently.</div>
+                <div class="mt-6 border-t border-blue-500 pt-4">
+                    <p class="text-xs text-blue-200">
+                        © 2026 League Of Information Technology. All rights reserved.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- ============ EXTENDED MEMBERS ============ -->
-    <section class="light">
-        <div class="container">
-            <h2>Core Team Members</h2>
-            <div class="grid grid-3">
-                <div class="member-card">
-                    <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 50px;">💻</div>
-                    <div class="member-info">
-                        <div class="member-name">Alex Rivera</div>
-                        <div class="member-role">Tech Lead</div>
-                        <div class="member-bio">Oversees technology initiatives and development projects.</div>
-                    </div>
-                </div>
+    </div>
 
-                <div class="member-card">
-                    <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 50px;">🎨</div>
-                    <div class="member-info">
-                        <div class="member-name">Sofia Reyes</div>
-                        <div class="member-role">Design Lead</div>
-                        <div class="member-bio">Creative director for branding and visual communication.</div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 50px;">📢</div>
-                    <div class="member-info">
-                        <div class="member-name">Daniel Torres</div>
-                        <div class="member-role">Marketing Officer</div>
-                        <div class="member-bio">Manages communications and event promotion strategies.</div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 50px;">🤝</div>
-                    <div class="member-info">
-                        <div class="member-name">Isabella Santos</div>
-                        <div class="member-role">Community Manager</div>
-                        <div class="member-bio">Builds relationships and fosters community engagement.</div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 50px;">📊</div>
-                    <div class="member-info">
-                        <div class="member-name">Marcus Lee</div>
-                        <div class="member-role">Analytics Officer</div>
-                        <div class="member-bio">Tracks metrics and provides data-driven insights for growth.</div>
-                    </div>
-                </div>
-
-                <div class="member-card">
-                    <div style="background: linear-gradient(135deg, #0052CC 0%, #003d99 100%); height: 200px; display: flex; align-items: center; justify-content: center; color: white; font-size: 50px;">🔧</div>
-                    <div class="member-info">
-                        <div class="member-name">Jason Kim</div>
-                        <div class="member-role">Operations Lead</div>
-                        <div class="member-bio">Ensures smooth execution of all club operations and activities.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ GENERAL MEMBERS ============ -->
-    <section class="container">
-        <h2>Active Members</h2>
-        <div class="grid grid-4">
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 10px;">👤</div>
-                    <div class="member-name">Emily Watson</div>
-                    <div class="member-role" style="font-size: 13px; color: #666;">Senior Member</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 10px;">👤</div>
-                    <div class="member-name">Christopher Park</div>
-                    <div class="member-role" style="font-size: 13px; color: #666;">Senior Member</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 10px;">👤</div>
-                    <div class="member-name">Jessica Chen</div>
-                    <div class="member-role" style="font-size: 13px; color: #666;">Junior Member</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 10px;">👤</div>
-                    <div class="member-name">Brandon Miller</div>
-                    <div class="member-role" style="font-size: 13px; color: #666;">Junior Member</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 10px;">👤</div>
-                    <div class="member-name">Nicole Rodriguez</div>
-                    <div class="member-role" style="font-size: 13px; color: #666;">Junior Member</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 10px;">👤</div>
-                    <div class="member-name">David Thompson</div>
-                    <div class="member-role" style="font-size: 13px; color: #666;">New Member</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 10px;">👤</div>
-                    <div class="member-name">Sarah Mitchell</div>
-                    <div class="member-role" style="font-size: 13px; color: #666;">New Member</div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-body" style="text-align: center;">
-                    <div style="font-size: 40px; margin-bottom: 10px;">👤</div>
-                    <div class="member-name">Kevin Anderson</div>
-                    <div class="member-role" style="font-size: 13px; color: #666;">New Member</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ QUICK LINKS ============ -->
-    <section class="light">
-        <div class="container">
-            <h2>Quick Navigation</h2>
-            <div class="grid grid-3">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>📖 Learn About Us</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Discover our history, mission, and vision for the future.</p>
-                        <a href="about.html" class="btn" style="width: 100%; text-align: center; display: block;">Read More</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3>👥 Our Team</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Meet the members who drive our organization.</p>
-                        <a href="members.html" class="btn" style="width: 100%; text-align: center; display: block;">View Members</a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3>📍 Get in Touch</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Reach out to us with questions or inquiries.</p>
-                        <a href="contact.html" class="btn" style="width: 100%; text-align: center; display: block;">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> 
-
-    <!-- ============ FOOTER ============ -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>About LISO</h4>
-                <p>The League of Information Technology Students is dedicated to fostering technology and creativity among students, providing a platform for innovation and collaborative learning.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="members.html">Members</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="#" title="Facebook">f</a>
-                    <a href="#" title="Twitter">𝕏</a>
-                    <a href="#" title="Instagram">📷</a>
-                    <a href="#" title="LinkedIn">in</a>
-                </div>
-                <p style="margin-top: 15px;">Connect with us on social media for updates and announcements.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Info</h4>
-                <p>📧 Email: info@liso-org.org</p>
-                <p>📱 Phone: (555) 123-4567</p>
-                <p>📍 Location: Campus Building A, Room 101</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 League of Information Technology Students. All rights reserved. | Proudly developed by our amazing student team.</p>
-        </div>
-    </footer>
 </body>
+
 </html>
